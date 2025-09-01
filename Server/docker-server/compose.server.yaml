@@ -1,0 +1,28 @@
+services:
+  app-server:
+    build:
+      context: ../..
+      dockerfile: Server/docker-server/Dockerfile.app-server
+    container_name: app-server
+    environment:
+      CONFIG_DIR: "/appConfig"
+    expose: ["2202","8080"]
+    volumes:
+      - ../config-server/appConfig:/appConfig:ro
+      - C:\\def\\messageStore:/var/messageStore
+      - C:\\def\\tunnel-logs:/var/log/tunnel-logs
+    restart: unless-stopped
+
+  tunnel-server:
+    build:
+      context: ../..
+      dockerfile: Server/docker-server/Dockerfile.tunnel-server
+    container_name: tunnel-server
+    environment:
+      CONFIG_DIR: "/tunnelConfig"
+    ports: ["2201:2201"]
+    volumes:
+      - ../config-server/tunnelConfig:/tunnelConfig:ro
+      - C:\\def\\tunnel-logs:/var/log/tunnel-logs
+    depends_on: [app-server]
+    restart: unless-stopped

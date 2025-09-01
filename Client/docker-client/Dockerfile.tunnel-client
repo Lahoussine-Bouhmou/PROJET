@@ -1,0 +1,13 @@
+FROM maven:3.9-eclipse-temurin-8 AS build
+WORKDIR /src
+COPY Client/tunnel-client/pom.xml ./
+RUN mvn -q -DskipTests dependency:go-offline
+COPY Client/tunnel-client/ ./
+RUN mvn -q -DskipTests clean package
+
+FROM eclipse-temurin:8-jre
+WORKDIR /app
+COPY --from=build /src/target/tunnel-client-1.0.0.jar ./tunnel-client.jar
+ENV CONFIG_DIR=/tunnelConfig
+EXPOSE 2200
+CMD ["sh","-c","java -DconfigDir=${CONFIG_DIR} -jar /app/tunnel-client.jar"]

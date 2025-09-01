@@ -1,0 +1,191 @@
+<segment id="sqlfields">
+    <!-- CAS SIMPLES -->
+    <sqlelement sqlname="IDHL7" type="string" prio="0" line="MSH" r="9" selm="0" f="0" s="0" rname="MessageType" fname="MessageCode" sname="MessageCode"/>
+    <sqlelement sqlname="IDVENUE" type="string" prio="0" line="PV1" r="19" selm="0" f="0" s="0" rname="VisitNumber" fname="VisitNumber" sname="VisitNumber"/>
+    <sqlelement sqlname="TYPEVENUE" type="string" prio="0" line="PV1" r="2" selm="0" f="0" s="0" rname="PatientClass" fname="PatientClass" sname="PatientClass"/>
+    <!-- <sqlelement sqlname="IDCHU1" type="string" prio="0" line="PID" r="18" selm="0" f="0" s="0" rname="PatientAccountNumber" fname="IDNumber" sname="IDNumber"/> -->
+    <sqlelement sqlname="DATENAISSANCE" type="date" prio="0" line="PID" r="7" selm="0" f="0" s="0" rname="DateTimeofBirth" fname="Time" sname="Time"/>
+    <sqlelement sqlname="SEXE" type="sexe" prio="0" line="PID" r="8" selm="0" f="0" s="0" rname="AdministrativeSex" fname="AdministrativeSex" sname="AdministrativeSex"/>
+    <sqlelement sqlname="NOSS" type="string" prio="0" line="PID" r="19" selm="0" f="0" s="0" rname="SSNNumber" fname="SSNNumber" sname="SSNNumber"/>
+    <sqlelement sqlname="IPPMERE" type="string" prio="0" line="PID" r="21" selm="0" f="0" s="0" rname="MotherIdentifier" fname="IDNumber" sname="IDNumber"/>
+    <sqlelement sqlname="STATUTMARITAL" type="string" prio="0" line="PID" r="16" selm="0" f="0" s="0" rname="MaritalStatus" fname="Identifier" sname="Identifier"/>
+    <sqlelement sqlname="DATEDECES" type="date" prio="0" line="PID" r="29" selm="0" f="0" s="0" rname="PatientDeathDateandTime" fname="Time" sname="Time"/>
+    <sqlelement sqlname="DCRE" type="date" prio="0" line="EVN" r="2" selm="0" f="0" s="0" rname="RecordedDateTime" fname="Time" sname="Time"/>
+    <sqlelement sqlname="DATEVENUE" type="date" prio="0" line="PV1" r="44" selm="0" f="0" s="0" rname="AdmitDateTime" fname="Time" sname="Time"/>
+    <sqlelement sqlname="IPPAFUSIONNER" type="string" prio="0" line="MRG" r="1" selm="0" f="0" s="0" rname="PriorPatientIdentifierList" fname="IDNumber" sname="IDNumber"/>
+    <sqlelement sqlname="IDVENUEAFUSIONNER" type="string" prio="0" line="MRG" r="5" selm="0" f="0" s="0" rname="Prior Visit Number" fname="IDNumber" sname="IDNumber"/>
+    <sqlelement sqlname="DECEDE" type="bool" prio="0" line="PID" r="30" selm="0" f="0" s="0" rname="PatientDeathIndicator" fname="PatientDeathIndicator" sname="PatientDeathIndicator"/>
+    <sqlelement sqlname="DATESORTIE" type="date" prio="0" line="PV1" r="45" selm="0" f="0" s="0" rname="AdmitDateTime" fname="Time" sname="Time"/>
+    <sqlelement sqlname="UF" type="string" prio="0" line="ZBE" r="8" selm="0" f="9" s="0" rname="UFReponsableSoins" fname="NA" sname="NA"/>
+    <sqlelement sqlname="NATIONALITE" type="string" prio="0" line="PID" r="26" selm="0" f="0" s="0" rname="Citizenship" fname="Identifier" sname="Identifier"/>
+    <sqlelement sqlname="NATIONALITE2" type="string" prio="0" line="PID" r="26" selm="1" f="0" s="0" rname="Citizenship" fname="Identifier" sname="Identifier"/>
+    <sqlelement sqlname="NATIONALITE3" type="string" prio="0" line="PID" r="26" selm="2" f="0" s="0" rname="Citizenship" fname="Identifier" sname="Identifier"/>
+    <sqlelement sqlname="UNITE" type="string" prio="0" line="PV1" r="3" selm="0" f="0" s="0" rname="AssignedPatientLocation" fname="PointofCare" sname="PointofCare"/>
+    <sqlelement sqlname="CHAMBRE" type="string" prio="0" line="PV1" r="3" selm="0" f="1" s="0" rname="AssignedPatientLocation" fname="Room" sname="Room"/>
+    <sqlelement sqlname="LIT" type="string" prio="0" line="PV1" r="3" selm="0" f="2" s="0" rname="AssignedPatientLocation" fname="Bed" sname="Bed"/>
+    <sqlelement sqlname="ADMIT" type="string" prio="0" line="PV1" r="14" selm="0" f="0" s="0" rname="AdmitSource" fname="AdmitSource" sname="AdmitSource"/>
+    <sqlelement sqlname="VIP" type="vip" prio="0" line="PV1" r="16" selm="0" f="0" s="0" rname="VIPIndicator" fname="VIPIndicator" sname="VIPIndicator"/>
+    <!-- Chevauchement: <sqlelement sqlname="ORIGINEGEO" type="string" prio="0" line="PID" r="22" selm="0" f="1" s="0" rname="EthnicGroup" fname="Identifier" sname="Identifier"/> -->
+    <sqlelement sqlname="DDNAPROXJOUR" type="string" prio="0" line="ZFD" r="1" selm="0" f="0" s="0" rname="DateLunaire" fname="JourLunaire" sname="JourLunaire"/>
+    <sqlelement sqlname="DDNAPROXMOIS" type="string" prio="0" line="ZFD" r="1" selm="0" f="1" s="0" rname="DateLunaire" fname="MoisLunaire" sname="MoisLunaire"/>
+    <sqlelement sqlname="DDNAPROXANNEE" type="string" prio="0" line="ZFD" r="1" selm="0" f="2" s="0" rname="DateLunaire" fname="AnneeLunaire" sname="AnneeLunaire"/>
+    <sqlelement sqlname="ADRESSE1_N1" type="string" prio="0" line="PID" r="11" selm="0" f="0" s="0" rname="PatientAddress" fname="StreetAddress" sname="StreetorMailingAddress"/>
+    <sqlelement sqlname="ADRESSE2_N1" type="string" prio="0" line="PID" r="11" selm="0" f="0" s="1" rname="PatientAddress" fname="StreetAddress" sname="StreetName"/>
+    <sqlelement sqlname="ADRESSE3_N1" type="string" prio="0" line="PID" r="11" selm="0" f="0" s="2" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="ADRESSE4_N1" type="string" prio="0" line="PID" r="11" selm="0" f="1" s="3" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="CP_N1" type="string" prio="0" line="PID" r="11" selm="0" f="4" s="0" rname="PatientAddress" fname="ZiporPostalCode" sname="ZiporPostalCode"/>
+    <sqlelement sqlname="VILLE_N1" type="string" prio="0" line="PID" r="11" selm="0" f="2" s="0" rname="PatientAddress" fname="City" sname="City"/>
+    <sqlelement sqlname="PAYS_N1" type="string" prio="0" line="PID" r="11" selm="0" f="5" s="0" rname="PatientAddress" fname="Country" sname="Country"/>
+    <sqlelement sqlname="ADRESSETYPE_N1" type="string" prio="0" line="PID" r="11" selm="0" f="6" s="0" rname="PatientAddress" fname="AddressType" sname="AddressType"/>
+    <sqlelement sqlname="ADRESSE1_N2" type="string" prio="0" line="PID" r="11" selm="1" f="0" s="0" rname="PatientAddress" fname="StreetAddress" sname="StreetorMailingAddress"/>
+    <sqlelement sqlname="ADRESSE2_N2" type="string" prio="0" line="PID" r="11" selm="1" f="0" s="1" rname="PatientAddress" fname="StreetAddress" sname="StreetName"/>
+    <sqlelement sqlname="ADRESSE3_N2" type="string" prio="0" line="PID" r="11" selm="1" f="0" s="2" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="ADRESSE4_N2" type="string" prio="0" line="PID" r="11" selm="1" f="1" s="3" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="CP_N2" type="string" prio="0" line="PID" r="11" selm="1" f="4" s="0" rname="PatientAddress" fname="ZiporPostalCode" sname="ZiporPostalCode"/>
+    <sqlelement sqlname="VILLE_N2" type="string" prio="0" line="PID" r="11" selm="1" f="2" s="0" rname="PatientAddress" fname="City" sname="City"/>
+    <sqlelement sqlname="PAYS_N2" type="string" prio="0" line="PID" r="11" selm="1" f="5" s="0" rname="PatientAddress" fname="Country" sname="Country"/>
+    <sqlelement sqlname="ADRESSETYPE_N2" type="string" prio="0" line="PID" r="11" selm="1" f="6" s="0" rname="PatientAddress" fname="AddressType" sname="AddressType"/>
+    <sqlelement sqlname="ADRESSE1_N3" type="string" prio="0" line="PID" r="11" selm="2" f="0" s="0" rname="PatientAddress" fname="StreetAddress" sname="StreetorMailingAddress"/>
+    <sqlelement sqlname="ADRESSE2_N3" type="string" prio="0" line="PID" r="11" selm="2" f="0" s="1" rname="PatientAddress" fname="StreetAddress" sname="StreetName"/>
+    <sqlelement sqlname="ADRESSE3_N3" type="string" prio="0" line="PID" r="11" selm="2" f="0" s="2" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="ADRESSE4_N3" type="string" prio="0" line="PID" r="11" selm="2" f="1" s="3" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="CP_N3" type="string" prio="0" line="PID" r="11" selm="2" f="4" s="0" rname="PatientAddress" fname="ZiporPostalCode" sname="ZiporPostalCode"/>
+    <sqlelement sqlname="VILLE_N3" type="string" prio="0" line="PID" r="11" selm="2" f="2" s="0" rname="PatientAddress" fname="City" sname="City"/>
+    <sqlelement sqlname="PAYS_N3" type="string" prio="0" line="PID" r="11" selm="2" f="5" s="0" rname="PatientAddress" fname="Country" sname="Country"/>
+    <sqlelement sqlname="ADRESSETYPE_N3" type="string" prio="0" line="PID" r="11" selm="2" f="6" s="0" rname="PatientAddress" fname="AddressType" sname="AddressType"/>
+    <sqlelement sqlname="ADRESSE1_N4" type="string" prio="0" line="PID" r="11" selm="3" f="0" s="0" rname="PatientAddress" fname="StreetAddress" sname="StreetorMailingAddress"/>
+    <sqlelement sqlname="ADRESSE2_N4" type="string" prio="0" line="PID" r="11" selm="3" f="0" s="1" rname="PatientAddress" fname="StreetAddress" sname="StreetName"/>
+    <sqlelement sqlname="ADRESSE3_N4" type="string" prio="0" line="PID" r="11" selm="3" f="0" s="2" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="ADRESSE4_N4" type="string" prio="0" line="PID" r="11" selm="3" f="1" s="3" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="CP_N4" type="string" prio="0" line="PID" r="11" selm="3" f="4" s="0" rname="PatientAddress" fname="ZiporPostalCode" sname="ZiporPostalCode"/>
+    <sqlelement sqlname="VILLE_N4" type="string" prio="0" line="PID" r="11" selm="3" f="2" s="0" rname="PatientAddress" fname="City" sname="City"/>
+    <sqlelement sqlname="PAYS_N4" type="string" prio="0" line="PID" r="11" selm="3" f="5" s="0" rname="PatientAddress" fname="Country" sname="Country"/>
+    <sqlelement sqlname="ADRESSETYPE_N4" type="string" prio="0" line="PID" r="11" selm="3" f="6" s="0" rname="PatientAddress" fname="AddressType" sname="AddressType"/>
+    <sqlelement sqlname="ADRESSE1_N5" type="string" prio="0" line="PID" r="11" selm="4" f="0" s="0" rname="PatientAddress" fname="StreetAddress" sname="StreetorMailingAddress"/>
+    <sqlelement sqlname="ADRESSE2_N5" type="string" prio="0" line="PID" r="11" selm="4" f="0" s="1" rname="PatientAddress" fname="StreetAddress" sname="StreetName"/>
+    <sqlelement sqlname="ADRESSE3_N5" type="string" prio="0" line="PID" r="11" selm="4" f="0" s="2" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="ADRESSE4_N5" type="string" prio="0" line="PID" r="11" selm="4" f="1" s="3" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber"/>
+    <sqlelement sqlname="CP_N5" type="string" prio="0" line="PID" r="11" selm="4" f="4" s="0" rname="PatientAddress" fname="ZiporPostalCode" sname="ZiporPostalCode"/>
+    <sqlelement sqlname="VILLE_N5" type="string" prio="0" line="PID" r="11" selm="4" f="2" s="0" rname="PatientAddress" fname="City" sname="City"/>
+    <sqlelement sqlname="PAYS_N5" type="string" prio="0" line="PID" r="11" selm="4" f="5" s="0" rname="PatientAddress" fname="Country" sname="Country"/>
+    <sqlelement sqlname="ADRESSETYPE_N5" type="string" prio="0" line="PID" r="11" selm="4" f="6" s="0" rname="PatientAddress" fname="AddressType" sname="AddressType"/>
+    <!-- CAS COMPLEXES -->
+    <sqlelement sqlname="SITUATION2" type="string">
+        <element prio="1" line="MSH" r="8" f="2" s="0" rname="MessageType" fname="MessageStructure" sname="MessageStructure"/>
+    </sqlelement>
+    <sqlelement sqlname="IPP" type="string">
+        <element prio="0" line="PID" r="3" f="0" s="0" rname="PatientIdentifierList" fname="IDNumber" sname="IDNumber" f1="4" s1="0" val1="PI"/>
+    </sqlelement>
+    <sqlelement sqlname="IDCHU1" type="string">
+        <element prio="0" line="PID" r="3" f="0" s="0" rname="PatientIdentifierList" fname="IDNumber" sname="IDNumber" f1="4" s1="0" val1="RI"/>
+    </sqlelement>
+    <sqlelement sqlname="INS" type="string">
+        <element prio="0" line="PID" r="3" f="0" s="0" rname="PatientIdentifierList" fname="IDNumber" sname="IDNumber" f1="4" s1="0" val1="INS"/>
+        <element prio="1" line="PID" r="3" f="0" s="0" rname="PatientIdentifierList" fname="IDNumber" sname="IDNumber" f1="4" s1="0" val1="INS-C"/>
+    </sqlelement>
+    <sqlelement sqlname="INS_C" type="string">
+        <element prio="1" line="PID" r="3" f="0" s="0" rname="PatientIdentifierList" fname="IDNumber" sname="IDNumber" f1="4" s1="0" val1="INS-C"/>
+    </sqlelement>
+    <sqlelement sqlname="INS_TYPE" type="string">
+        <element prio="0" line="PID" r="3" f="4" s="0" rname="PatientIdentifierList" fname="IdentifierTypeCode" sname="IdentifierTypeCode" f1="4" s1="0" val1="INS"/>
+        <element prio="1" line="PID" r="3" f="4" s="0" rname="PatientIdentifierList" fname="IdentifierTypeCode" sname="IdentifierTypeCode" f1="4" s1="0" val1="INS-C"/>
+    </sqlelement>
+    <sqlelement sqlname="INS_OID" type="string">
+        <segment id="PID" r="3" f="3" s="2" rname="PatientIdentifierList" fname="AssigningAuthority"  sname="UniversalIDType">INS_OID</segment>
+        <element prio="0" line="PID" r="3" f="3" s="1" rname="PatientIdentifierList" fname="AssigningAuthority" sname="UniversalIDType" f1="4" s1="0" val1="INS"/>
+        <element prio="1" line="PID" r="3" f="3" s="1" rname="PatientIdentifierList" fname="AssigningAuthority" sname="UniversalIDType" f1="4" s1="0" val1="INS-C"/>
+    </sqlelement>
+    <sqlelement sqlname="LIEUNAISSANCE" type="string">
+        <element prio="0" line="PID" r="11" f="8" s="0" rname="PatientAddress" fname="BirthPlace" sname="BirthPlace" f1="6" s1="0" val1="BDL"/>
+        <element prio="1" line="PID" r="11" f="8" s="0" rname="PatientAddress" fname="BirthPlace" sname="BirthPlace" f1="6" s1="0" val1="BLD"/>
+    </sqlelement>
+    <sqlelement sqlname="ORIGINEGEO" type="string">
+        <element prio="0" line="PID" r="11" f="2" s="0" rname="PatientAddress" fname="BirthPlace" sname="BirthPlace" f1="6" s1="0" val1="BDL"/>
+        <element prio="1" line="PID" r="11" f="2" s="0" rname="PatientAddress" fname="BirthPlace" sname="BirthPlace" f1="6" s1="0" val1="BLD"/>
+    </sqlelement>
+    <sqlelement sqlname="NOMUSAGE" type="string">
+        <element prio="3" line="PID" r="5" f="0" s="0" rname="PatientName" fname="PatientName" sname="Surname" f1="6" s1="0" val1="M"/>
+        <element prio="2" line="PID" r="5" f="0" s="0" rname="PatientName" fname="PatientName" sname="Surname" f1="6" s1="0" val1="B"/>
+        <element prio="1" line="PID" r="5" f="0" s="0" rname="PatientName" fname="PatientName" sname="Surname" f1="6" s1="0" val1="L"/>
+        <element prio="0" line="PID" r="5" f="0" s="0" rname="PatientName" fname="PatientName" sname="Surname" f1="6" s1="0" val1="D"/>
+    </sqlelement>
+    <sqlelement sqlname="NOMNAISSANCE" type="string">
+        <element prio="0" line="PID" r="5" f="0" s="0" rname="PatientName" fname="PatientName" sname="Surname" f1="6" s1="0" val1="L"/>
+        <element prio="1" line="PID" r="5" f="0" s="0" rname="PatientName" fname="PatientName" sname="Surname" f1="6" s1="0" val1="B"/>
+        <element prio="2" line="PID" r="5" f="0" s="0" rname="PatientName" fname="PatientName" sname="Surname" f1="6" s1="0" val1="M"/>
+    </sqlelement>
+    <sqlelement sqlname="PRENOM" type="string">
+        <element prio="0" line="PID" r="5" f="1" s="0" rname="PatientName" fname="PatientName" sname="GivenName" f1="6" s1="0" val1="L"/>
+        <element prio="1" line="PID" r="5" f="1" s="0" rname="PatientName" fname="PatientName" sname="GivenName" f1="6" s1="0" val1="D"/>
+    </sqlelement>
+    <sqlelement sqlname="ADRESSE1" type="string">
+        <element prio="0" line="PID" r="11" f="0" s="0" rname="PatientAddress" fname="StreetAddress" sname="StreetorMailingAddress" f1="6" s1="0" val1="H"/>
+        <element prio="1" line="PID" r="11" f="0" s="0" rname="PatientAddress" fname="StreetAddress" sname="StreetorMailingAddress" f1="6" s1="0" val1="C"/>
+    </sqlelement>
+    <sqlelement sqlname="ADRESSE2" type="string">
+        <element prio="0" line="PID" r="11" f="0" s="1" rname="PatientAddress" fname="StreetAddress" sname="StreetName" f1="6" s1="0" val1="H"/>
+        <element prio="1" line="PID" r="11" f="0" s="1" rname="PatientAddress" fname="StreetAddress" sname="StreetName" f1="6" s1="0" val1="C"/>
+    </sqlelement>
+    <sqlelement sqlname="ADRESSE3" type="string">
+        <element prio="0" line="PID" r="11" f="0" s="2" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber" f1="6" s1="0" val1="H"/>
+        <element prio="1" line="PID" r="11" f="0" s="2" rname="PatientAddress" fname="StreetAddress" sname="DwellingNumber" f1="6" s1="0" val1="C"/>
+    </sqlelement>
+    <sqlelement sqlname="CP" type="string">
+        <element prio="0" line="PID" r="11" f="4" s="0" rname="PatientAddress" fname="ZiporPostalCode" sname="ZiporPostalCode" f1="6" s1="0" val1="H"/>
+        <element prio="1" line="PID" r="11" f="4" s="0" rname="PatientAddress" fname="ZiporPostalCode" sname="ZiporPostalCode" f1="6" s1="0" val1="C"/>
+    </sqlelement>
+    <sqlelement sqlname="VILLE" type="string">
+        <element prio="0" line="PID" r="11" f="2" s="0" rname="PatientAddress" fname="City" sname="City" f1="6" s1="0" val1="H"/>
+        <element prio="1" line="PID" r="11" f="2" s="0" rname="PatientAddress" fname="City" sname="City" f1="6" s1="0" val1="C"/>
+    </sqlelement>
+    <sqlelement sqlname="PAYS" type="string">
+        <element prio="0" line="PID" r="11" f="5" s="0" rname="PatientAddress" fname="Country" sname="Country" f1="6" s1="0" val1="H"/>
+        <element prio="1" line="PID" r="11" f="5" s="0" rname="PatientAddress" fname="Country" sname="Country" f1="6" s1="0" val1="C"/>
+    </sqlelement>
+    <sqlelement sqlname="TELFIXE" type="phone">
+        <element prio="0" line="PID" r="13" f="0" s="0" rname="PhoneNumberHome" fname="TelephoneNumber" sname="TelephoneNumber" f1="2" s1="0" val1="PH" f2="1" s2="0" val2="PRN"/>
+        <element prio="1" line="PID" r="13" f="0" s="0" rname="PhoneNumberHome" fname="TelephoneNumber" sname="TelephoneNumber" f1="2" s1="0" val1="PH"/>
+        <element prio="2" line="PID" r="13" f="0" s="0" rname="PhoneNumberHome" fname="TelephoneNumber" sname="TelephoneNumber" f2="1" s2="0" val2="PRN"/>
+        <element prio="3" line="PID" r="13" f="0" s="0" rname="PhoneNumberHome" fname="TelephoneNumber" sname="TelephoneNumber"/>
+    </sqlelement>
+    <sqlelement sqlname="TELPORTABLE" type="phone">
+        <element prio="0" line="PID" r="13" f="0" s="0" rname="PhoneNumberHome" fname="TelephoneNumber" sname="TelephoneNumber" f1="2" s1="0" val1="CP" f2="1" s2="0" val2="PRN"/>
+        <element prio="1" line="PID" r="13" f="0" s="0" rname="PhoneNumberHome" fname="TelephoneNumber" sname="TelephoneNumber" f1="2" s1="0" val1="CP"/>
+    </sqlelement>
+    <sqlelement sqlname="TELTRAVAIL" type="phone">
+        <element prio="0" line="PID" r="14" f="0" s="0" rname="PhoneNumberBusiness" fname="TelephoneNumber" sname="TelephoneNumber" f1="2" s1="0" val1="PH" f2="1" s2="0" val2="WPN"/>
+        <element prio="1" line="PID" r="14" f="0" s="0" rname="PhoneNumberBusiness" fname="TelephoneNumber" sname="TelephoneNumber" f1="2" s1="0" val1="CP" f2="1" s2="0" val2="WPN"/>
+        <element prio="2" line="PID" r="14" f="0" s="0" rname="PhoneNumberBusiness" fname="TelephoneNumber" sname="TelephoneNumber" f2="1" s2="0" val2="WPN"/>
+        <element prio="3" line="PID" r="14" f="0" s="0" rname="PhoneNumberBusiness" fname="TelephoneNumber" sname="TelephoneNumber"/>
+    </sqlelement>
+    <sqlelement sqlname="EMAIL" type="string">
+        <element prio="0" line="PID" r="13" f="3" s="0" rname="PhoneNumberHome" fname="EmailAddress" sname="EmailAddress" f1="2" s1="0" val1="Internet" f2="1" s2="0" val2="NET"/>
+        <element prio="1" line="PID" r="14" f="3" s="0" rname="PhoneNumberBusiness" fname="EmailAddress" sname="EmailAddress" f1="2" s1="0" val1="Internet" f2="1" s2="0" val2="NET"/>
+        <element prio="2" line="PID" r="13" f="3" s="0" rname="PhoneNumberHome" fname="EmailAddress" sname="EmailAddress" f2="1" s2="0" val2="NET"/>
+        <element prio="3" line="PID" r="14" f="3" s="0" rname="PhoneNumberBusiness" fname="EmailAddress" sname="EmailAddress" f2="1" s2="0" val2="NET"/>
+        <element prio="4" line="PID" r="13" f="3" s="0" rname="PhoneNumberHome" fname="EmailAddress" sname="EmailAddress"/>
+        <element prio="5" line="PID" r="14" f="3" s="0" rname="PhoneNumberBusiness" fname="EmailAddress" sname="EmailAddress"/>
+    </sqlelement>
+    <sqlelement sqlname="DMAJ" type="date">
+        <element prio="0" line="EVN" r="6" f="0" s="0" rname="RecordedDateTime" fname="Time" sname="Time"/>
+        <element prio="1" line="EVN" r="2" f="0" s="0" rname="EventOccurred" fname="Time" sname="Time"/>
+    </sqlelement>
+    <sqlelement sqlname="SITUATION" type="string">
+        <element prio="0" line="MSH" r="8" f="1" s="0" rname="MessageType" fname="TriggerEvent" sname="TriggerEvent"/>
+    </sqlelement>
+    <sqlelement sqlname="MED1RPPS" type="string">
+        <element prio="0" line="PV1" r="7" f="0" s="0" rname="AttendingDoctor" fname="IDNumber" sname="IDNumber" f1="12" s1="0" val1="RPPS"/>
+    </sqlelement>
+    <sqlelement sqlname="MED1ADELI" type="string">
+        <element prio="0" line="PV1" r="7" f="0" s="0" rname="AttendingDoctor" fname="IDNumber" sname="IDNumber" f1="12" s1="0" val1="ADELI"/>
+    </sqlelement>
+    <sqlelement sqlname="MED2RPPS" type="string">
+        <element prio="0" line="PV1" r="8" f="0" s="0" rname="ReferringDoctor" fname="IDNumber" sname="IDNumber" f1="12" s1="0" val1="RPPS"/>
+    </sqlelement>
+    <sqlelement sqlname="MED2ADELI" type="string">
+        <element prio="0" line="PV1" r="8" f="0" s="0" rname="ReferringDoctor" fname="IDNumber" sname="IDNumber" f1="12" s1="0" val1="ADELI"/>
+    </sqlelement>
+    <!-- AJOUTS DDS DU 2022-06-08 -->
+    <sqlelement sqlname="LANGUE" type="string" prio="0" line="PID" r="15" selm="0" f="0" s="0" rname="PrimaryLanguage" fname="PrimaryLanguage" sname="PrimaryLanguage"/>
+    <sqlelement sqlname="POIDS" type="string" prio="0" line="DRG" r="15" selm="0" f="0" s="0" rname="EffectiveWeight" fname="EffectiveWeight" sname="EffectiveWeight"/>
+</segment>

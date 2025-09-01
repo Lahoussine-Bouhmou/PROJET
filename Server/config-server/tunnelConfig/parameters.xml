@@ -1,0 +1,18 @@
+<config>
+    <localPort>2201</localPort>
+    <remoteHost>app-server</remoteHost>     <!-- nom du container -->
+    <remotePort>2202</remotePort>
+
+    <keystoreFile>keystore.jks</keystoreFile>
+    <keystorePassword>changeit</keystorePassword>
+
+    <!-- // Optionnel pour authentification mutuelle
+    <truststoreFile>truststore-optionnel.jks</truststoreFile>
+    <truststorePassword>changeit</truststorePassword>
+    -->
+
+    <!-- Logging -->
+    <logDirectory>/var/log/tunnel-logs</logDirectory>
+    <logFileName>logs_tunnel-server.log</logFileName>
+    <logLevel>INFO</logLevel>
+</config>

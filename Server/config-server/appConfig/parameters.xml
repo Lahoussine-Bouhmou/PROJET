@@ -1,0 +1,16 @@
+<appConfig>
+    <httpPort>8080</httpPort>
+    <mllpPort>2202</mllpPort>
+    <hostBind>0.0.0.0</hostBind>          <!-- optionnel: IP à binder -->
+    <endRecord>$$$</endRecord>
+
+    <!-- Watcher -->
+    <watchTimer>90</watchTimer>
+    <!-- <urlact>http://127.0.0.1:8080/app-server/health</urlact> --> <!-- optionnel -->
+
+    <!-- Stockage -->
+    <storeFolder>/var/messageStore</storeFolder>
+    <!-- Logs -->
+    <logFile>/var/log/tunnel-logs/logs_app-server.log</logFile>
+    <debug>0</debug>
+</appConfig>

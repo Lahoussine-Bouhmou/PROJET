@@ -1,0 +1,18 @@
+<config>
+    <localPort>2200</localPort>
+    <remoteHost>host.docker.internal</remoteHost>
+    <remotePort>2201</remotePort>
+
+    <!-- // Optionnel pour authetification mutuelle
+    <keystoreFile>keystore-optionnel.jks</keystoreFile>
+    <keystorePassword>changeit</keystorePassword>
+     -->
+
+    <truststoreFile>truststore.jks</truststoreFile>
+    <truststorePassword>changeit</truststorePassword>
+
+    <!-- Logging -->
+    <logDirectory>/var/log/tunnel-logs</logDirectory>
+    <logFileName>logs_tunnel-client.log</logFileName>
+    <logLevel>INFO</logLevel>
+</config>

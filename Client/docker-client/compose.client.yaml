@@ -1,0 +1,27 @@
+services:
+  app-client:
+    build:
+      context: ../..
+      dockerfile: Client/docker-client/Dockerfile.app-client
+    container_name: app-client
+    environment:
+      CONFIG_DIR: "/appConfig"
+    ports: [ "8080:8080" ]
+    volumes:
+      - ../config-client/appConfig:/appConfig:ro
+      - C:\\def\\tunnel-logs:/var/log/tunnel-logs
+    depends_on: [ tunnel-client ]
+    restart: unless-stopped
+
+  tunnel-client:
+    build:
+      context: ../..
+      dockerfile: Client/docker-client/Dockerfile.tunnel-client
+    container_name: tunnel-client
+    environment:
+      CONFIG_DIR: "/tunnelConfig"
+    ports: ["2200:2200"]
+    volumes:
+      - ../config-client/tunnelConfig:/tunnelConfig:ro
+      - C:\\def\\tunnel-logs:/var/log/tunnel-logs
+    restart: unless-stopped

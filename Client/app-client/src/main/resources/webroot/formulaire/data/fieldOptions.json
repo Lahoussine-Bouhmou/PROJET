@@ -1,0 +1,107 @@
+{
+  "SITUATION": [
+    { "value": "",    "text": "— Sélectionner —" },
+    { "value": "A01", "text": "Admit / Visit (A01)" },
+    { "value": "A02", "text": "Transfer (A02)" },
+    { "value": "A03", "text": "Discharge (A03)" },
+    { "value": "A04", "text": "Register (A04)" },
+    { "value": "A05", "text": "Pre-admit (A05)" },
+    { "value": "",    "text": "Autres …" }
+  ],
+
+  "SEXE": [
+    { "value": "",  "text": "— Sélectionner —" },
+    { "value": "F", "text": "Female (F)" },
+    { "value": "M", "text": "Male (M)" },
+    { "value": "O", "text": "Other (O)" },
+    { "value": "U", "text": "Unknown (U)" },
+    { "value": "A", "text": "Ambiguous (A)" },
+    { "value": "N", "text": "Not applicable (N)" }
+  ],
+
+  "ADRESSETYPE_N1": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "H", "text": "Home (H)" },
+    { "value": "M", "text": "Mailing (M)" },
+    { "value": "L", "text": "Legal Address (L)" }
+  ],
+
+  "ADRESSETYPE_N2": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "H", "text": "Home (H)" },
+    { "value": "M", "text": "Mailing (M)" },
+    { "value": "L", "text": "Legal Address (L)" }
+  ],
+
+  "ADRESSETYPE_N3": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "H", "text": "Home (H)" },
+    { "value": "M", "text": "Mailing (M)" },
+    { "value": "L", "text": "Legal Address (L)" }
+  ],
+
+  "ADRESSETYPE_N4": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "H", "text": "Home (H)" },
+    { "value": "M", "text": "Mailing (M)" },
+    { "value": "L", "text": "Legal Address (L)" }
+  ],
+
+  "ADRESSETYPE_N5": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "H", "text": "Home (H)" },
+    { "value": "M", "text": "Mailing (M)" },
+    { "value": "L", "text": "Legal Address (L)" }
+  ],
+
+  "STATUTMARITAL": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "A", "text": "Separated (A)" },
+    { "value": "D", "text": "Divorced (D)" },
+    { "value": "M", "text": "Married (M)" },
+    { "value": "S", "text": "Single (S)" },
+    { "value": "W", "text": "Widowed (W)" },
+    { "value": "C", "text": "Common law (C)" },
+    { "value": "G", "text": "Living together (G)" },
+    { "value": "R", "text": "Registered domestic partner (R)" },
+    { "value": "E", "text": "Legally Separated (E)" },
+    { "value": "N", "text": "Annulled (N)" },
+    { "value": "I", "text": "Interlocutory (I)" },
+    { "value": "B", "text": "Unmarried (B)" },
+    { "value": "U", "text": "Unknown (U)" },
+    { "value": "O", "text": "Other (O)" },
+    { "value": "T", "text": "Unreported (T)" }
+  ],
+
+  "DECEDE": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "N", "text": "No (N)" },
+    { "value": "Y", "text": "Yes (Y)" }
+  ],
+
+  "TYPEVENUE": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "E", "text": "Emergency (E)" },
+    { "value": "I", "text": "Inpatient (I)" },
+    { "value": "O", "text": "Outpatient (O)" },
+    { "value": "P", "text": "Preadmit (P)" },
+    { "value": "R", "text": "Recurring patient (R)" },
+    { "value": "B", "text": "Obstetrics (B)" },
+    { "value": "C", "text": "Commercial Account (C)" },
+    { "value": "N", "text": "Not Applicable (N)" },
+    { "value": "U", "text": "Unknown (U)" }
+  ],
+
+  "ADMIT": [
+    { "value": "", "text": "— Sélectionner —" },
+    { "value": "1", "text": "Physician referral (1)" },
+    { "value": "2", "text": "Clinic referral (2)" },
+    { "value": "3", "text": "HMO referral (3)" },
+    { "value": "4", "text": "Transfer from a hospital (4)" },
+    { "value": "5", "text": "Transfer from a skilled nursing facility (5)" },
+    { "value": "6", "text": "Transfer from another health care facility (6)" },
+    { "value": "7", "text": "Emergency room (7)" },
+    { "value": "8", "text": "Court/law enforcement (8)" },
+    { "value": "9", "text": "Information not available (9)" }
+  ]
+}

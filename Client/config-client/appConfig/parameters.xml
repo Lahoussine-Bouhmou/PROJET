@@ -1,0 +1,10 @@
+<appConfig>
+    <httpPort>8080</httpPort>
+    <tunnelHost>tunnel-client</tunnelHost>
+    <tunnelPort>2200</tunnelPort>
+
+    <logFile>/var/log/tunnel-logs/logs_app-client.log</logFile>
+    <!-- C:\def\tunnel-logs\logs_app-client.log -->
+
+    <debug>4</debug>
+</appConfig>

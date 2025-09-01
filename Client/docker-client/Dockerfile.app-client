@@ -1,0 +1,18 @@
+FROM maven:3.9-eclipse-temurin-8 AS build
+WORKDIR /src
+COPY Client/app-client/pom.xml ./
+RUN mvn -q -DskipTests dependency:go-offline
+COPY Client/app-client/ ./
+RUN mvn -q -DskipTests clean package
+
+FROM eclipse-temurin:8-jre
+WORKDIR /app
+ENV CONFIG_DIR=/appConfig
+COPY --from=build /src/target/app-client*.jar /app/app-client.jar
+RUN mkdir -p /var/log/tunnel-logs
+EXPOSE 8080
+HEALTHCHECK --interval=30s --timeout=3s --retries=5 \
+  CMD sh -c 'PORT=$(sed -n "s:.*<httpPort>\\(.*\\)</httpPort>.*:\\1:p" ${CONFIG_DIR}/parameters.xml | head -n1); \
+             [ -z "$PORT" ] && PORT=8080; \
+             wget -qO- http://localhost:${PORT}/app-client/formulaire/index.html >/dev/null 2>&1 || exit 1'
+CMD ["sh","-c","java -DconfigDir=${CONFIG_DIR} -jar /app/app-client.jar"]
