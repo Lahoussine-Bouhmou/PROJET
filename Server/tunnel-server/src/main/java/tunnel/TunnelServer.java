@@ -1,4 +1,3 @@
-// src/main/java/tunnel/TunnelServer.java
 package tunnel;
 
 import javax.net.ssl.*;
@@ -12,9 +11,9 @@ public class TunnelServer {
 
     public static void main(String[] args) {
         // 1) Chargement de la config XML
-        String cfgDir = "/tunnelConfig";
-        File cfgFile = new File(System.getProperty("configDir", cfgDir),
-                "parameters.xml");
+        String cfgDir = System.getProperty("configDir", "/tunnelConfig");
+        File cfgFile = new File(cfgDir, "parameters.xml");
+
         ConfigLoader cfg;
         try {
             cfg = new ConfigLoader(cfgFile);
@@ -26,15 +25,17 @@ public class TunnelServer {
 
         // 2) Configuration du logger
         try {
-            File dir = new File(cfg.logDirectory);
-            if (!dir.exists()) dir.mkdirs();
-            FileHandler fh = new FileHandler(
-                    new File(dir, cfg.logFileName).getAbsolutePath(), true);
+            File logFile = new File(cfg.logFile);
+            File parentDir = logFile.getParentFile();
+            if (parentDir != null && !parentDir.exists()) {
+                parentDir.mkdirs();
+            }
+            FileHandler fh = new FileHandler(logFile.getAbsolutePath(), true);
             fh.setFormatter(new SimpleFormatter());
             logger.addHandler(fh);
             logger.setLevel(cfg.logLevel);
         } catch (IOException e) {
-            System.err.println("[LOGGER ERROR] Impossible de configurer le logger: " + e.getMessage());
+            System.err.println("[LOGGER ERROR] Impossible de configurer le logger : " + e.getMessage());
             System.exit(2);
         }
 
@@ -70,20 +71,19 @@ public class TunnelServer {
     private static void handleConnection(SSLSocket ssl, String remoteHost, int remotePort) {
         Socket plain = null;
         try {
-            // 1) Handshake TLS explicite
+            // Handshake TLS
             ssl.setUseClientMode(false);
             ssl.startHandshake();
             logger.info("Handshake TLS OK avec " + ssl.getRemoteSocketAddress());
 
-            // 2) Timeouts
             ssl.setSoTimeout(30_000);
 
-            // 3) Connexion au serveur final en clair
+            // Connexion avec app-server
             plain = new Socket(remoteHost, remotePort);
             plain.setSoTimeout(30_000);
             logger.info("Connexion plain établie vers " + remoteHost + ":" + remotePort);
 
-            // 4) Lancement des relais avec noms de thread
+            // Lancement des relais
             Thread tSslToPlain = new Thread(relay(ssl.getInputStream(), plain.getOutputStream()),
                     "relay-ssl-to-plain-" + ssl.getPort());
             Thread tPlainToSsl = new Thread(relay(plain.getInputStream(), ssl.getOutputStream()),
@@ -91,10 +91,9 @@ public class TunnelServer {
             tSslToPlain.start();
             tPlainToSsl.start();
 
-            // 5) Attente de la fin du flux TLS → plain
+            // Attente (avec d'abord demi-fermeture) et FIN TLS
             tSslToPlain.join();
 
-            // 6) Demi-fermeture plain → serveur final (FIN)
             if (!plain.isClosed() && plain.isConnected()) {
                 try {
                     plain.shutdownOutput();
@@ -104,7 +103,6 @@ public class TunnelServer {
                 }
             }
 
-            // 7) Attente de la fin du flux plain → TLS
             tPlainToSsl.join();
             logger.info("Tunnel terminé pour client SSL " + ssl.getRemoteSocketAddress());
 
@@ -131,12 +129,12 @@ public class TunnelServer {
                     out.flush();
                 }
             } catch (IOException ignored) {
-                // Arrêt normal lors de la fermeture
+                // fermeture normale
             }
         };
     }
 
-    /** Ferme proprement plusieurs Closeable en loggant les erreurs éventuelles */
+    /** Ferme proprement plusieurs Closeable */
     private static void closeAll(Closeable... resources) {
         for (Closeable c : resources) {
             if (c != null) {
@@ -150,8 +148,8 @@ public class TunnelServer {
 
     /**
      * Construit un SSLContext serveur à partir de :
-     * - keystoreFile/keystorePassword (optionnel, pour authentification mutuelle)
-     * - truststoreFile/truststorePassword (obligatoire, pour vérifier le serveur)
+     *      - keystoreFile/keystorePassword (optionnel, pour mTLS)
+     *      - truststoreFile/truststorePassword (obligatoire)
      */
     private static SSLContext createSSLContext(String cfgDir,
                                                String ksFile, String ksPwd,

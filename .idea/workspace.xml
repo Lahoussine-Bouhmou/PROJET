@@ -4,7 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9981db66-69b9-4db0-b758-ffe7d96c5de3" name="Changes" comment="" />
+    <list default="true" id="9981db66-69b9-4db0-b758-ffe7d96c5de3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/src/main/java/zetasocket/AppConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/src/main/java/zetasocket/AppConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/src/main/java/zetasocket/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/src/main/java/zetasocket/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/src/main/java/zetasocket/socketSenderSt.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/src/main/java/zetasocket/socketSenderSt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/src/main/resources/webroot/formulaire/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/src/main/resources/webroot/formulaire/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/target/app-client-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/target/app-client-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/target/classes/webroot/formulaire/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/target/classes/webroot/formulaire/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/target/classes/zetasocket/AppConfigLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/target/classes/zetasocket/AppConfigLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/target/classes/zetasocket/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/target/classes/zetasocket/Launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/app-client/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Client/app-client/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/config-client/appConfig/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/config-client/appConfig/parameters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/config-client/tunnelConfig/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/config-client/tunnelConfig/parameters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tunnel-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/tunnel-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tunnel-client/src/main/java/tunnel/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/tunnel-client/src/main/java/tunnel/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tunnel-client/src/main/java/tunnel/TunnelClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/tunnel-client/src/main/java/tunnel/TunnelClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tunnel-client/target/classes/tunnel/ConfigLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/tunnel-client/target/classes/tunnel/ConfigLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tunnel-client/target/classes/tunnel/TunnelClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/tunnel-client/target/classes/tunnel/TunnelClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tunnel-client/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Client/tunnel-client/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/tunnel-client/target/tunnel-client-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Client/tunnel-client/target/tunnel-client-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app-server/src/main/java/zetasocket/AppConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app-server/src/main/java/zetasocket/AppConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app-server/src/main/java/zetasocket/socketSrv.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app-server/src/main/java/zetasocket/socketSrv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app-server/target/app-server-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app-server/target/app-server-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app-server/target/classes/zetasocket/AppConfigLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app-server/target/classes/zetasocket/AppConfigLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app-server/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app-server/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/config-server/appConfig/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/config-server/appConfig/parameters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/config-server/tunnelConfig/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/config-server/tunnelConfig/parameters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tunnel-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tunnel-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tunnel-server/src/main/java/tunnel/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tunnel-server/src/main/java/tunnel/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tunnel-server/src/main/java/tunnel/TunnelServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tunnel-server/src/main/java/tunnel/TunnelServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tunnel-server/target/classes/tunnel/ConfigLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tunnel-server/target/classes/tunnel/ConfigLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tunnel-server/target/classes/tunnel/TunnelServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tunnel-server/target/classes/tunnel/TunnelServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tunnel-server/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tunnel-server/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tunnel-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tunnel-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tunnel-server/target/tunnel-server-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tunnel-server/target/tunnel-server-1.0.0.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,21 +58,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/eleve/Desktop/projetTunnel&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/projetTunnel",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\eleve\Desktop\projetTunnel" />
       <recent name="C:\projetTunnel\Client\tunnelConfig" />
       <recent name="C:\projetTunnel\Server\tunnelConfig" />
       <recent name="C:\projetTunnel" />

@@ -394,7 +394,7 @@ public class socketSrv
                                 endMsg = true;
                                 endMessage();
                             }
-                            // J'ai changé: //((endRecord != null) && (line.startsWith("MRG") || line.startsWith(endRecord))) en :
+                            // J'ai changé: ((endRecord != null) && (line.startsWith("MRG") || line.startsWith(endRecord))) en :
                             else if ((endRecord != null) && (line.startsWith(endRecord)))
                             {
                                 input += line + "\n";

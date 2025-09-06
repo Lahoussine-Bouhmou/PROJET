@@ -88,14 +88,14 @@ public class socketSenderSt extends GenericServlet
                 return;
             }
             // ==== Création de fichier temporaire si on reçoit hl7msg au lieu de zs:file ====
-            File temp = null;                                                       // <<< AJOUT
-            if ((q == null || q.isEmpty()) && hl7 != null && !hl7.isEmpty()) {      // <<< AJOUT
-                temp = File.createTempFile("hl7msg-", ".hl7");                      // <<< AJOUT
-                try (FileWriter fw = new FileWriter(temp, false)) {                 // <<< AJOUT
-                    fw.write(hl7);                                                  // <<< AJOUT
-                }                                                                   // <<< AJOUT
-                q = temp.getAbsolutePath();                                         // <<< AJOUT
-            }                                                                       // <<< AJOUT
+            File temp = null;
+            if ((q == null || q.isEmpty()) && hl7 != null && !hl7.isEmpty()) {
+                temp = File.createTempFile("hl7msg-", ".hl7");
+                try (FileWriter fw = new FileWriter(temp, false)) {
+                    fw.write(hl7);
+                }
+                q = temp.getAbsolutePath();
+            }
             if (q == null)
             {
                 zetaTrace("Pb recup fichier?");
@@ -129,7 +129,7 @@ public class socketSenderSt extends GenericServlet
             ackMsg="";
             ackMsg = senderInstance.send(q);
             // suppression du fichier temporaire si utilisé
-            if (temp != null) temp.delete();                                            // <<< AJOUT
+            if (temp != null) temp.delete();
 
             response.setContentType("application/xml; charset=utf-8");
 

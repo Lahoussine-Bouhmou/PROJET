@@ -1,6 +1,6 @@
 <config>
     <localPort>2200</localPort>
-    <remoteHost>host.docker.internal</remoteHost>
+    <remoteHost>localhost</remoteHost> <!-- host.docker.internal -->
     <remotePort>2201</remotePort>
 
     <!-- // Optionnel pour authetification mutuelle
@@ -12,7 +12,7 @@
     <truststorePassword>changeit</truststorePassword>
 
     <!-- Logging -->
-    <logDirectory>/var/log/tunnel-logs</logDirectory>
-    <logFileName>logs_tunnel-client.log</logFileName>
+    <logFile>C:\def\tunnel-logs\logs_tunnel-client.log</logFile>
     <logLevel>INFO</logLevel>
+    <!--/var/log/tunnel-logs/logs_tunnel-client.log     C:/def/tunnel-logs/logs_tunnel-client.log -->
 </config>

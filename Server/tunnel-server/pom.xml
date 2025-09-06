@@ -6,8 +6,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- identité du projet -->
-    <groupId>defgen</groupId>
+    <groupId>projetTunnel</groupId>
     <artifactId>tunnel-server</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
@@ -40,5 +39,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

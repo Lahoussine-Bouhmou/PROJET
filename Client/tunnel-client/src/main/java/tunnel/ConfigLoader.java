@@ -1,4 +1,3 @@
-// src/main/java/tunnel/ConfigLoader.java
 package tunnel;
 
 import org.w3c.dom.*;
@@ -17,9 +16,8 @@ public class ConfigLoader {
     public final String truststoreFile;
     public final String truststorePassword;
 
-    public final String logDirectory;
-    public final String logFileName;
-    public final Level  logLevel;
+    public final String logFile;
+    public final Level logLevel;
 
     public ConfigLoader(File cfgFile) throws Exception {
         Document doc = DocumentBuilderFactory.newInstance()
@@ -29,23 +27,22 @@ public class ConfigLoader {
         Element cfg = doc.getDocumentElement();
 
         // --Paramètres obligatoires
-        this.localPort    = getRequiredInt(cfg, "localPort");
-        this.remoteHost   = getRequiredString(cfg, "remoteHost");
-        this.remotePort   = getRequiredInt(cfg, "remotePort");
-        this.truststoreFile     = getRequiredString(cfg, "truststoreFile");
+        this.localPort = getRequiredInt(cfg, "localPort");
+        this.remoteHost = getRequiredString(cfg, "remoteHost");
+        this.remotePort = getRequiredInt(cfg, "remotePort");
+        this.truststoreFile = getRequiredString(cfg, "truststoreFile");
         this.truststorePassword = getRequiredString(cfg, "truststorePassword");
 
         // --Paramètres optionnels (mutual TLS)
-        this.keystoreFile     = getOptionalString(cfg, "keystoreFile", null);
+        this.keystoreFile = getOptionalString(cfg, "keystoreFile", null);
         this.keystorePassword = (keystoreFile != null)
                 ? getRequiredString(cfg, "keystorePassword")
                 : null;
 
         // Logging (avec valeurs par défaut)
-        this.logDirectory = getOptionalString(cfg, "logDirectory", "/var/log/tunnel-logs");
-        this.logFileName  = getOptionalString(cfg, "logFileName", "logs_tunnel-client.log");
+        this.logFile = getOptionalString(cfg, "logFile", "/var/log/tunnel-logs/logs_tunnel-client.log");
         String lvl = getOptionalString(cfg, "logLevel", "INFO");
-        this.logLevel     = Level.parse(lvl);
+        this.logLevel = Level.parse(lvl);
     }
 
     private String getRequiredString(Element cfg, String tag) {
@@ -73,4 +70,3 @@ public class ConfigLoader {
         return s.isEmpty() ? defaultVal : s;
     }
 }
-

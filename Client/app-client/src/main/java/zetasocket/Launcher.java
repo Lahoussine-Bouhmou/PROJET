@@ -24,11 +24,11 @@ public class Launcher {
         ctx.setBaseResource(base);
         ctx.addServlet(new ServletHolder("default", new DefaultServlet()), "/");
 
-        // Injecter les init-params de ton servlet depuis le XML
+        // Injecter les init-params dans le servlet socketSenderSt depuis le XML
         ServletHolder sender = new ServletHolder(new socketSenderSt());
-        sender.setInitParameter("debug",   String.valueOf(cfg.debug));
-        sender.setInitParameter("host",    cfg.tunnelHost);
-        sender.setInitParameter("port",    String.valueOf(cfg.tunnelPort));
+        sender.setInitParameter("debug", String.valueOf(cfg.debug));
+        sender.setInitParameter("host", cfg.tunnelHost);
+        sender.setInitParameter("port", String.valueOf(cfg.tunnelPort));
         sender.setInitParameter("logfile", cfg.logFile);
         ctx.addServlet(sender, "/servlet/socketSender");
 

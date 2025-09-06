@@ -1,4 +1,3 @@
-// src/main/java/tunnel/ConfigLoader.java
 package tunnel;
 
 import org.w3c.dom.*;
@@ -17,8 +16,7 @@ public class ConfigLoader {
     public final String truststoreFile;      // optionnel
     public final String truststorePassword;  // optionnel
 
-    public final String logDirectory;
-    public final String logFileName;
+    public final String logFile;
     public final Level logLevel;
 
     public ConfigLoader(File cfgFile) throws Exception {
@@ -29,10 +27,10 @@ public class ConfigLoader {
         Element cfg = doc.getDocumentElement();
 
         // --Paramètres obligatoires
-        this.localPort        = getRequiredInt(cfg, "localPort");
-        this.remoteHost       = getRequiredString(cfg, "remoteHost");
-        this.remotePort       = getRequiredInt(cfg, "remotePort");
-        this.keystoreFile     = getRequiredString(cfg, "keystoreFile");
+        this.localPort = getRequiredInt(cfg, "localPort");
+        this.remoteHost = getRequiredString(cfg, "remoteHost");
+        this.remotePort = getRequiredInt(cfg, "remotePort");
+        this.keystoreFile = getRequiredString(cfg, "keystoreFile");
         this.keystorePassword = getRequiredString(cfg, "keystorePassword");
 
         // --Paramètres optionnels (mutual TLS)
@@ -42,8 +40,7 @@ public class ConfigLoader {
                 : null;
 
         // Logging (avec valeurs par défaut)
-        this.logDirectory = getOptionalString(cfg, "logDirectory", "/var/log/tunnel-logs");
-        this.logFileName  = getOptionalString(cfg, "logFileName", "logs_tunnel-server.log");
+        this.logFile = getOptionalString(cfg, "logFile", "/var/log/tunnel-logs/logs_tunnel-server.log");
         String lvl = getOptionalString(cfg, "logLevel", "INFO");
         this.logLevel = Level.parse(lvl);
     }

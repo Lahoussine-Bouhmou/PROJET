@@ -1,4 +1,3 @@
-// src/main/java/tunnel/TunnelClient.java
 package tunnel;
 
 import javax.net.ssl.*;
@@ -14,9 +13,9 @@ public class TunnelClient {
 
     public static void main(String[] args) {
         // 1) Chargement de la config
-        String cfgDir = "/tunnelConfig";
-        File cfgFile = new File(System.getProperty("configDir", cfgDir),
-                "parameters.xml");
+        String cfgDir = System.getProperty("configDir", "/tunnelConfig");
+        File cfgFile = new File(cfgDir, "parameters.xml");
+
         ConfigLoader cfg;
         try {
             cfg = new ConfigLoader(cfgFile);
@@ -28,10 +27,12 @@ public class TunnelClient {
 
         // 2) Configuration du logger
         try {
-            File dir = new File(cfg.logDirectory);
-            if (!dir.exists()) dir.mkdirs();
-            FileHandler fh = new FileHandler(
-                    new File(dir, cfg.logFileName).getAbsolutePath(), true);
+            File logFile = new File(cfg.logFile);
+            File parentDir = logFile.getParentFile();
+            if (parentDir != null && !parentDir.exists()) {
+                parentDir.mkdirs();
+            }
+            FileHandler fh = new FileHandler(logFile.getAbsolutePath(), true);
             fh.setFormatter(new SimpleFormatter());
             logger.addHandler(fh);
             logger.setLevel(cfg.logLevel);
@@ -99,6 +100,7 @@ public class TunnelClient {
 
             // 4) Attente et FIN TLS
             tPlainToSsl.join();
+
             if (!ssl.isClosed() && ssl.isConnected()) {
                 try {
                     ssl.shutdownOutput();
@@ -107,6 +109,7 @@ public class TunnelClient {
                             "Impossible d'envoyer FIN TLS (socket peut-être déjà fermée)", e);
                 }
             }
+
             tSslToPlain.join();
             logger.info("Tunnel terminé pour " + plain.getRemoteSocketAddress());
 
@@ -133,12 +136,12 @@ public class TunnelClient {
                     out.flush();
                 }
             } catch (IOException ignored) {
-                // fermeture attendue
+                // fermeture normale
             }
         };
     }
 
-    /** Ferme proprement plusieurs ressources en loggant les erreurs éventuelles */
+    /** Ferme proprement plusieurs ressources */
     private static void closeAll(Closeable... resources) {
         for (Closeable c : resources) {
             if (c != null) {
@@ -152,8 +155,8 @@ public class TunnelClient {
 
     /**
      * Construit un SSLContext client à partir de :
-     * - keystoreFile/keystorePassword (optionnel, pour authentification mutuelle)
-     * - truststoreFile/truststorePassword (obligatoire, pour vérifier le serveur)
+     *      - keystoreFile/keystorePassword (optionnel, pour mTLS)
+     *      - truststoreFile/truststorePassword (obligatoire)
      */
     private static SSLContext createSSLContext(String cfgDir,
                                                String ksFile, String ksPwd,

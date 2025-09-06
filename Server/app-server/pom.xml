@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>defgen</groupId>
+    <groupId>projetTunnel</groupId>
     <artifactId>app-server</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
@@ -11,7 +11,6 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jetty.version>9.4.54.v20240208</jetty.version>
     </properties>
 
@@ -28,7 +27,7 @@
             <version>${jetty.version}</version>
         </dependency>
 
-        <!-- API Servlet (embarqué dans le shaded JAR) -->
+        <!-- API Servlet (embarqué dans le JAR) -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -59,7 +58,7 @@
                         <phase>package</phase>
                         <goals><goal>shade</goal></goals>
                         <configuration>
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <shadedArtifactAttached>false</shadedArtifactAttached>
                             <outputFile>${project.build.directory}/${project.artifactId}-${project.version}.jar</outputFile>
                             <transformers>
